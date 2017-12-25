@@ -1,0 +1,9 @@
+function prob = mixturepdf(x_dcts_all, dim, mean_c, sigma_c,pi)
+
+prob = 0.0
+for idx = 1:dim  
+    prob = prob + (mvnpdf(x_dcts_all,...
+        mean_C(64*dimension-63:64*dimension),...
+        sigma_c(64*dimension-63:64*dimension,64*dimension-63:64*dimension)))...
+        *pi(idx)
+end
